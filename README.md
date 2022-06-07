@@ -10,7 +10,7 @@ This Docker will download and install SteamCMD and the according game that is pu
 | SERVER_DIR | Folder for gamefile | /serverdata/serverfiles |
 | GAME_ID | The GAME_ID that the container downloads at startup. If you want to install a static or beta version of the game change the value to: '232330 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install). | 1141420 |
 | GAME_NAME | SRCDS gamename | remnants |
-| GAME_PARAMS | Values to start the server | |
+| GAME_PARAMS | Values to start the server | Empty |
 | UID | User Identifier | 99 |
 | GID | Group Identifier | 100 |
 | GAME_PORT | Port the server will be running on | 7777 |
@@ -25,7 +25,6 @@ docker run --name Remnants -d \
 	--env 'GAME_ID=1141420' \
 	--env 'GAME_NAME=remnants' \
 	--env 'GAME_PORT=7777' \
-	--env 'GAME_PARAMS=' \
 	--env 'UID=99' \
 	--env 'GID=100' \
 	--volume /path/to/steamcmd:/serverdata/steamcmd \
